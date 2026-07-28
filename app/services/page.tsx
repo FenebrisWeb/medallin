@@ -1,3 +1,3 @@
-export default function Home() {
+export default function Services() {
   return <div className="flex-1" />;
 }
