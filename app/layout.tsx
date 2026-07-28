@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Wrapper from "./components/layout/wrapper";
+import { BookingModalProvider } from "./components/ui/booking-modal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Wrapper>{children}</Wrapper>
+        <BookingModalProvider>
+          <Wrapper>{children}</Wrapper>
+        </BookingModalProvider>
       </body>
     </html>
   );

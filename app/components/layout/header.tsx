@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { useBookingModal } from "@/app/components/ui/booking-modal";
 import type { NavLink } from "@/app/types";
 
 const navLinks: NavLink[] = [
@@ -44,6 +45,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+  const { openModal } = useBookingModal();
 
   return (
     <header className="relative z-50 w-full bg-transparent pt-4">
@@ -86,13 +88,14 @@ export default function Header() {
           >
             Contact
           </Link>
-          <Link
-            href="/book-now"
+          <button
+            type="button"
+            onClick={openModal}
             className="flex items-center gap-1.5 rounded-full bg-zinc-950 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
           >
             Book Now
             <ArrowUpRightIcon />
-          </Link>
+          </button>
           <button
             type="button"
             aria-label="Change language"
@@ -140,14 +143,17 @@ export default function Header() {
             >
               Login
             </Link>
-            <Link
-              href="/book-demo"
+            <button
+              type="button"
+              onClick={() => {
+                setMobileOpen(false);
+                openModal();
+              }}
               className="flex items-center justify-center gap-1.5 rounded-full bg-zinc-950 px-4 py-2.5 text-sm font-medium text-white dark:bg-white dark:text-zinc-950"
-              onClick={() => setMobileOpen(false)}
             >
-              Book demo
+              Book Now
               <ArrowUpRightIcon />
-            </Link>
+            </button>
           </div>
         </div>
       )}

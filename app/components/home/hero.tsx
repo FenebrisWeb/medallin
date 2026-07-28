@@ -1,5 +1,7 @@
-import Link from "next/link";
+"use client";
+
 import HeroImageSlider from "@/app/components/home/hero-image-slider";
+import { useBookingModal } from "@/app/components/ui/booking-modal";
 import type { HeroContent } from "@/app/types";
 
 const heroContent: HeroContent = {
@@ -35,6 +37,8 @@ function MailIcon() {
 }
 
 export default function Hero() {
+  const { openModal } = useBookingModal();
+
   return (
     <section className="mx-auto w-[90%] max-w-7xl py-16 sm:py-20 lg:py-24">
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-10">
@@ -70,13 +74,14 @@ export default function Hero() {
 
           <div className="mt-4 flex items-center gap-3 text-sm text-zinc-500 dark:text-zinc-400">
             <span>or</span>
-            <Link
-              href="#"
+            <button
+              type="button"
+              onClick={openModal}
               className="flex items-center gap-1.5 rounded-full border border-black/[.08] px-4 py-2 font-medium text-zinc-700 transition-colors hover:bg-black/[.04] dark:border-white/[.145] dark:text-zinc-200 dark:hover:bg-white/[.08]"
             >
               {heroContent.secondaryCtaLabel}
               <ArrowUpRightIcon />
-            </Link>
+            </button>
           </div>
         </div>
 
