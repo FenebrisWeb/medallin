@@ -49,3 +49,21 @@ export interface CorporateSplitContent {
   manifest: ManifestField[];
   image: HeroImage;
 }
+
+export interface FooterColumn {
+  heading: string;
+  links: NavLink[];
+}
+
+export interface FooterContent {
+  positioningStatement: string;
+  email: string;
+  phone: string;
+  city: string;
+  ctaLabel: string;
+  ctaHref: string;
+  columns: FooterColumn[];
+  stats: string[];
+  socialLinks: NavLink[];
+  legalEntity: string;
+}

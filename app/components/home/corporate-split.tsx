@@ -32,7 +32,7 @@ function ArrowUpRightIcon() {
 
 export default function CorporateSplit() {
   return (
-    <section className="mx-auto w-[90%] max-w-7xl py-16 sm:py-20 lg:py-24">
+    <section id="corporate" className="mx-auto w-[90%] max-w-7xl py-16 sm:py-20 lg:py-24">
       <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-amber-600 dark:text-amber-400">
           {corporateSplit.eyebrow}
