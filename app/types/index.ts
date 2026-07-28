@@ -34,3 +34,18 @@ export interface EventItem {
   description: string;
   gallery: HeroImage[];
 }
+
+export interface ManifestField {
+  label: string;
+  value: string;
+}
+
+export interface CorporateSplitContent {
+  eyebrow: string;
+  headline: string;
+  description: string;
+  ctaLabel: string;
+  ctaHref: string;
+  manifest: ManifestField[];
+  image: HeroImage;
+}

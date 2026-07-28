@@ -1,6 +1,7 @@
 import Hero from "@/app/components/home/hero";
 import BrandStatement from "@/app/components/home/brand-statement";
 import Events from "@/app/components/home/events";
+import CorporateSplit from "@/app/components/home/corporate-split";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <BrandStatement />
       <Events />
+      <CorporateSplit />
     </div>
   );
 }
