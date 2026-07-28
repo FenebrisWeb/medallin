@@ -80,7 +80,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <HeroImageSlider images={heroContent.images} />
+        <HeroImageSlider images={heroContent.images} priority />
       </div>
     </section>
   );

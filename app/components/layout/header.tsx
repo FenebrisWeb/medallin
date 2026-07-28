@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import type { NavLink } from "@/app/types";
 
@@ -41,6 +42,8 @@ function MenuIcon({ open }: { open: boolean }) {
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
     <header className="relative z-50 w-full bg-transparent pt-4">
@@ -64,7 +67,12 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-full px-3 py-2 text-sm font-medium text-zinc-700 transition-colors hover:bg-black/[.04] dark:text-zinc-200 dark:hover:bg-white/[.08]"
+              aria-current={isActive(link.href) ? "page" : undefined}
+              className={`rounded-full px-3 py-2 text-sm font-medium transition-colors ${
+                isActive(link.href)
+                  ? "bg-black/[.06] text-zinc-950 dark:bg-white/[.12] dark:text-white"
+                  : "text-zinc-700 hover:bg-black/[.04] dark:text-zinc-200 dark:hover:bg-white/[.08]"
+              }`}
             >
               {link.label}
             </Link>
@@ -112,7 +120,12 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-zinc-700 dark:text-zinc-200"
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`rounded-lg px-3 py-2.5 text-sm font-medium ${
+                  isActive(link.href)
+                    ? "bg-black/[.06] text-zinc-950 dark:bg-white/[.12] dark:text-white"
+                    : "text-zinc-700 dark:text-zinc-200"
+                }`}
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}

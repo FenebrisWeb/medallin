@@ -6,7 +6,13 @@ import type { HeroImage } from "@/app/types";
 
 const SLIDE_INTERVAL_MS = 4000;
 
-export default function HeroImageSlider({ images }: { images: HeroImage[] }) {
+export default function HeroImageSlider({
+  images,
+  priority = false,
+}: {
+  images: HeroImage[];
+  priority?: boolean;
+}) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -27,7 +33,7 @@ export default function HeroImageSlider({ images }: { images: HeroImage[] }) {
           src={image.src}
           alt={image.alt}
           fill
-          priority={index === 0}
+          priority={priority && index === 0}
           className={`object-cover transition-opacity duration-1000 ease-in-out ${
             index === activeIndex ? "opacity-100" : "opacity-0"
           }`}

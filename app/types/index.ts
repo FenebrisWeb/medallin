@@ -78,6 +78,22 @@ export interface ServiceModule {
   image?: HeroImage;
 }
 
+export interface ServiceDetail {
+  slug: string;
+  index: string;
+  title: string;
+  headline: { lead: string; accent: string };
+  body: string;
+  tag: string;
+  images: HeroImage[];
+}
+
+export interface ServicesPageContent {
+  eyebrow: string;
+  headline: { lead: string; accent: string };
+  description: string;
+}
+
 export interface FooterColumn {
   heading: string;
   links: NavLink[];
