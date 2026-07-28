@@ -44,7 +44,7 @@ export default function Header() {
 
   return (
     <header className="relative z-50 w-full bg-transparent pt-4">
-      <div className="mx-auto flex w-[90%] items-center justify-between gap-4 rounded-full bg-[#fdfaf2] px-4 py-2.5 shadow-sm dark:bg-zinc-900">
+      <div className="mx-auto flex w-[90%] max-w-7xl items-center justify-between gap-4 rounded-full bg-[#fdfaf2] px-4 py-2.5 shadow-sm dark:bg-zinc-900">
         <Link
           href="/"
           className="flex shrink-0 items-center rounded-xl bg-white px-2.5 py-1.5 shadow-sm"
@@ -106,7 +106,7 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="mx-auto mt-2 w-[90%] rounded-3xl bg-[#fdfaf2] px-4 pb-6 pt-2 shadow-sm lg:hidden dark:bg-zinc-900">
+        <div className="mx-auto mt-2 w-[90%] max-w-7xl rounded-3xl bg-[#fdfaf2] px-4 pb-6 pt-2 shadow-sm lg:hidden dark:bg-zinc-900">
           <nav className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link

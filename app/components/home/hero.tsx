@@ -36,7 +36,7 @@ function MailIcon() {
 
 export default function Hero() {
   return (
-    <section className="w-[90%] mx-auto py-16 sm:py-20 lg:py-24">
+    <section className="mx-auto w-[90%] max-w-7xl py-16 sm:py-20 lg:py-24">
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-10">
         <div>
           <h1 className="whitespace-nowrap font-serif text-2xl font-medium leading-tight text-zinc-950 sm:text-3xl lg:text-4xl dark:text-white">

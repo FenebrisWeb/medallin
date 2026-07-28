@@ -7,7 +7,7 @@ const brandStatement: BrandStatementContent = {
 
 export default function BrandStatement() {
   return (
-    <section className="w-[90%] mx-auto py-14 sm:py-16 lg:py-20">
+    <section className="mx-auto w-[90%] max-w-7xl py-14 sm:py-16 lg:py-20">
       <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
         <span className="h-2 w-2 rounded-full bg-amber-400" />
 
