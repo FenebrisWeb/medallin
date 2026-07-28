@@ -43,7 +43,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-transparent pt-4">
+    <header className="relative z-50 w-full bg-transparent pt-4">
       <div className="mx-auto flex w-[90%] items-center justify-between gap-4 rounded-full bg-[#fdfaf2] px-4 py-2.5 shadow-sm dark:bg-zinc-900">
         <Link
           href="/"
