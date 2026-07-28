@@ -44,12 +44,20 @@ const marqueeLogos = [...clientLogos, ...clientLogos];
 
 export default function Clients() {
   return (
-    <section id="clients" className="mx-auto w-full max-w-[1800px] py-16 sm:py-20 lg:py-24">
-      <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-amber-600 dark:text-amber-400">
-        Our Clients
-      </p>
+    <section id="clients" className="w-full py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto flex w-[90%] max-w-7xl flex-col items-center text-center">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-amber-600 dark:text-amber-400">
+          Our Clients
+        </p>
+        <h2 className="mt-4 font-serif text-2xl leading-snug text-zinc-950 sm:text-3xl lg:text-4xl dark:text-white">
+          Brands who trust us with <em className="italic text-zinc-500 dark:text-zinc-400">the moment.</em>
+        </h2>
+        <p className="mt-4 max-w-xl text-base text-zinc-600 dark:text-zinc-400">
+          From global beverage brands to national leagues, here's who we've delivered for.
+        </p>
+      </div>
 
-      <div className="group relative mt-8 overflow-hidden">
+      <div className="group relative mx-auto mt-12 max-w-[1800px] overflow-hidden">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent sm:w-24 dark:from-zinc-950" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent sm:w-24 dark:from-zinc-950" />
 
@@ -57,7 +65,7 @@ export default function Clients() {
           {marqueeLogos.map((logo, index) => (
             <div
               key={`${logo.src}-${index}`}
-              className="flex h-28 w-56 shrink-0 items-center justify-center rounded-2xl bg-white shadow-sm sm:h-32 sm:w-64 dark:bg-zinc-900"
+              className="flex h-28 w-56 shrink-0 items-center justify-center rounded-3xl border border-black/[.08] bg-white shadow-sm sm:h-32 sm:w-64 dark:border-white/[.145] dark:bg-zinc-900"
             >
               <Image
                 src={logo.src}
