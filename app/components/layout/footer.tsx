@@ -23,8 +23,8 @@ const footerContent: FooterContent = {
     {
       heading: "Company",
       links: [
-        { label: "About Medallin", href: "/about" },
-        { label: "Clients", href: "/#corporate" },
+        { label: "About Medallin", href: "/#about" },
+        { label: "Clients", href: "/#clients" },
         { label: "Careers", href: "/careers" },
         { label: "Magazine", href: "/magazine" },
       ],

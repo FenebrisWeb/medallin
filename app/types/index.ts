@@ -50,6 +50,34 @@ export interface CorporateSplitContent {
   image: HeroImage;
 }
 
+export interface ClientLogo {
+  src: string;
+  alt: string;
+}
+
+export interface AboutStat {
+  value: string;
+  label: string;
+}
+
+export interface AboutContent {
+  eyebrow: string;
+  headline: string;
+  description: string;
+  stats: AboutStat[];
+  image: HeroImage;
+}
+
+export interface ServiceModule {
+  slug: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  tag: string;
+  icon: string;
+  image?: HeroImage;
+}
+
 export interface FooterColumn {
   heading: string;
   links: NavLink[];

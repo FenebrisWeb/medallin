@@ -15,7 +15,7 @@ const RESUME_DELAY_MS = 3000;
 const DRAG_MOVE_THRESHOLD_PX = 6;
 
 function gallery(base: string, extraCount: number, alt: string) {
-  const files = [`${base}.jfif`, ...Array.from({ length: extraCount }, (_, i) => `${base} ${i + 2}.jfif`)];
+  const files = [`${base}.webp`, ...Array.from({ length: extraCount }, (_, i) => `${base} ${i + 2}.webp`)];
   return files.map((file) => ({ src: `/events/${file}`, alt }));
 }
 

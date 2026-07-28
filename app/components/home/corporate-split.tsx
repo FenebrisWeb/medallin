@@ -17,7 +17,7 @@ const corporateSplit: CorporateSplitContent = {
     { label: "Status", value: "Delivered" },
   ],
   image: {
-    src: "/events/Vivo HR Meet Conference.jfif",
+    src: "/events/Vivo HR Meet Conference.webp",
     alt: "Vivo Elevate HR Meet 2026 conference in Phuket, Thailand",
   },
 };
