@@ -27,3 +27,10 @@ export interface BrandStatementContent {
   setup: string;
   emphasis: string;
 }
+
+export interface EventItem {
+  title: string;
+  tag: string;
+  description: string;
+  gallery: HeroImage[];
+}
